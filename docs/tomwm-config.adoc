@@ -1,0 +1,78 @@
+= tomwm-config(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-config
+// tag::purpose[]
+:manpurpose: Query TomWM config options
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm config [-h|--help] --get <name> [--json] [--keys]
+tomwm config [-h|--help] --major-keys
+tomwm config [-h|--help] --all-keys
+tomwm config [-h|--help] --config-path
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+For now, only `mode.*` config options are supported
+
+Under the hood, the config is represented as recursive data structure of maps, arrays, strings, and integers.
+
+Printing without `--json` or `--keys` flag is supported only for scalar types (strings and integers) and array of scalar types.
+Printing other complicated objects requires `--json` or `--keys` flag.
+
+// =========================================================== Options
+include::util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--get <name>:: Get the value for a given key. You can inspect available keys with `--major-keys` or `--all-keys`
+--major-keys:: Print major keys
+--all-keys:: Print all available keys recursively
+--json:: Print result in JSON format
+--keys:: Print keys of the complicated object (map or array)
+--config-path:: Print absolute path to the loaded config
+
+// =========================================================== Examples
+include::util/conditional-examples-header.adoc[]
+
+* List all binding modes:
++
+----
+$ tomwm config --get mode --keys
+main
+service
+----
+* List all key bindings for 'main' binding mode:
++
+----
+$ tomwm config --get mode.main.binding --keys
+alt-1
+alt-2
+...
+----
+* List all key bindings for 'main' binding mode in JSON format:
++
+----
+$ tomwm config --get mode.main.binding --json
+{
+  "alt-1" : "view --index 1",
+  "alt-2" : "view --index 2",
+  "alt-3" : "view --index 3",
+  "alt-shift-1" : "tag --index 1",
+  "alt-shift-2" : "tag --index 2",
+  "alt-shift-3" : "tag --index 3",
+...
+----
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

@@ -1,0 +1,52 @@
+= tomwm-view(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-view
+// tag::purpose[]
+:manpurpose: Show the windows carrying the given tags
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm view [-h|--help] [--monitor <monitor-id>] [--toggle] <tag>...
+tomwm view [-h|--help] [--monitor <monitor-id>] [--toggle] --index <n>...
+tomwm view [-h|--help] [--monitor <monitor-id>] --all
+tomwm view [-h|--help] [--monitor <monitor-id>] [--back-and-forth]
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+Windows are grouped by tags. A window carries one or more tags, and a monitor shows every window
+that carries at least one of the tags currently selected on it. Tags are per monitor, as in dwm.
+
+With no arguments, or with `--back-and-forth`, the previously selected set of tags is restored.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--toggle:: Add the tags to the current selection if they are not in it, remove them if they are.
+           The selection can never become empty, so a request that would empty it is refused
+--all:: Select every tag
+--back-and-forth:: Restore the previously selected tags
+--index <n>:: Name the tags by their 1-based position in the `tags` config option instead of by
+              name. Key bindings should prefer this: renaming a tag then costs nothing
+
+--monitor <monitor-id>::
+include::./util/monitor-flag-desc.adoc[]
+
+// =========================================================== Arguments
+include::./util/conditional-arguments-header.adoc[]
+
+<tag>:: A tag name, as declared by the `tags` config option
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

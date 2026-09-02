@@ -1,0 +1,45 @@
+= tomwm-layout(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-layout
+// tag::purpose[]
+:manpurpose: Change the layout of the focused monitor
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm layout [-h|--help] [--monitor <monitor-id>] [--fail-if-noop] (tile|monocle|floating)...
+tomwm layout [-h|--help] [--monitor <monitor-id>] --toggle
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+Three layouts, per monitor:
+
+`tile` (`[]=`):: the master area on the left, the stacking area on the right
+`monocle` (`[M]`):: every window maximised to the screen
+`floating` (`><>`):: every window keeps the position and size you give it
+
+Passing several layouts cycles through them: the first one that is not the current layout wins, so
+`layout tile monocle` toggles between the two.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--toggle:: Go back to the previously used layout
+--fail-if-noop:: Exit with a non-zero code if the monitor already uses the requested layout
+
+--monitor <monitor-id>::
+include::./util/monitor-flag-desc.adoc[]
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

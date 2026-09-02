@@ -1,0 +1,24 @@
+= tomwm(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm
+:manpurpose: i3-like tiling window manager for macOS
+
+== Synopsis
+[verse]
+tomwm [-h|--help] [-v|--version] <subcommand> [<subcommand-options>...] [<subcommand-arguments>...]
+
+== Description
+
+tomwm is a dynamic window manager for macOS in the spirit of dwm
+
+*tomwm* command line program is used to manipulate TomWM and query its state.
+
+See xref:commands.adoc[tomwm commands] for the available <subcommand> options
+
+See each <subcommand> individual man page for <subcommand-options> and <subcommand-arguments>
+
+== Options
+
+-h, --help:: Print help
+
+include::util/man-footer.adoc[]

@@ -1,0 +1,10 @@
+====
+tomwm is a dynamic window manager for macOS in the spirit of dwm
+
+*Project homepage*: https://github.com/tamasgal/tomwm
+
+image:assets/icon.png[300,300,float="right"]
+
+* xref:guide.adoc[tomwm Guide]
+* xref:commands.adoc[tomwm Commands]
+====

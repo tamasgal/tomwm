@@ -1,0 +1,42 @@
+= tomwm-mfact(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-mfact
+// tag::purpose[]
+:manpurpose: Change the fraction of the screen the master area takes
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm mfact [-h|--help] [--monitor <monitor-id>] <fraction>
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+`<fraction>` is relative when it carries an explicit sign and absolute otherwise, so `mfact +0.05`
+widens the master area and `mfact 0.55` sets it to 55% of the screen. The value is clamped to the
+range 0.05 to 0.95.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+
+--monitor <monitor-id>::
+include::./util/monitor-flag-desc.adoc[]
+
+// =========================================================== Arguments
+include::./util/conditional-arguments-header.adoc[]
+
+<fraction>:: `+<fraction>` or `-<fraction>` to change the width, `<fraction>` to set it
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

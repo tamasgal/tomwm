@@ -1,0 +1,206 @@
+= tomwm Guide
+include::util/site-attributes.adoc[]
+
+include::util/header.adoc[]
+
+== The model
+
+tomwm is dwm's model on macOS. There is no tree, there are no nested splits, and there are no
+per-window weights. There is a master area, a stacking area, and tags.
+
+=== Master and stack
+
+The master area holds the window that needs your attention right now. Every other window goes into
+the stacking area beside it.
+
+Each monitor keeps its windows in one ordered list. The window at the front of that list is the
+master. xref:tomwm-zoom.adoc[`zoom`] moves the focused window to the front, which is how a window
+becomes the master; running it again on the master swaps it back with the window it displaced, so
+the binding is its own undo.
+
+`nmaster` decides how many windows the master area holds, and `mfact` decides how much of the
+screen width it takes. Both are per monitor, and both have a config default.
+
+=== Layouts
+
+Three layouts, per monitor:
+
+[cols="1,1,4"]
+|===
+| Layout | Symbol | What it does
+
+| `tile`     | `[]=` | the master area on the left, the stacking area on the right
+| `monocle`  | `[M]` | every window maximised to the screen
+| `floating` | `><>` | every window keeps the position and size you give it
+|===
+
+xref:tomwm-layout.adoc[`layout`] switches between them. Passing several layouts cycles through
+them, and `--toggle` returns to the one you used before.
+
+=== Tags
+
+Windows are grouped by tags rather than by workspaces. A window carries one or more tags, and a
+monitor shows every window that carries at least one of the tags currently selected on it.
+
+That is the difference from a workspace: a window can be on several tags at once, so it can appear
+in several views. A window on `web` and `dev` is visible whenever you are looking at either.
+
+Tags are per monitor, as in dwm: `dev` on your laptop screen and `dev` on your external display
+are different views.
+
+* xref:tomwm-view.adoc[`view`] changes which tags you are looking at
+* xref:tomwm-tag.adoc[`tag`] changes which tags a window carries
+* `--toggle` on either adds and removes rather than replacing
+* xref:tomwm-list-tags.adoc[`list-tags`] shows what is selected and what is occupied
+
+Both take either a name or a 1-based position: `view web` and `view --index 2` are the same thing
+when `web` is the second tag. Key bindings should use the position, so that renaming a tag does not
+mean rewriting every binding that mentions it. That is what dwm's `TAGKEYS` macro does, and the
+shipped config does the same.
+
+Two things can never happen: a monitor showing no tags at all, and a window carrying no tags. Both
+would leave something unreachable, so tomwm refuses the operation instead.
+
+The tags themselves are named in the config:
+
+[source,toml]
+----
+tags = ['base', 'web', 'dev', 'doc', 'img', 'vid', 'mus', 'eml', 'foo']
+----
+
+At most 32 tags. The shipped bindings only cover the first nine, since that is how many number
+keys there are; bind whatever you like to `--index 10` and up if you want more.
+
+=== Floating windows and dialogs
+
+A floating window keeps whatever position and size you give it and is ignored by the tiling
+layouts. xref:tomwm-floating.adoc[`floating`] toggles it.
+
+Dialogs are always managed floating and can never be tiled, whatever the layout. Which windows
+count as dialogs is decided by an Accessibility heuristic: broadly, a window with no working
+fullscreen button, a non-standard subrole, or one of a long list of per-application special cases.
+It is a good deal more careful than it sounds, and it is covered by recorded Accessibility dumps in
+the repository. If you disagree with its verdict for some application,
+xref:tomwm-debug-windows.adoc[`debug-windows`] shows you what it decided and why.
+
+== Configuration
+
+Plain TOML, read from the first of these that exists:
+
+. `~/.tomwm.toml`
+. `$XDG_CONFIG_HOME/tomwm/tomwm.toml` (`$XDG_CONFIG_HOME` defaults to `~/.config`)
+
+If neither exists, the shipped default config is used. It is worth reading in full:
+link:https://github.com/tamasgal/tomwm/blob/main/docs/config-examples/default-config.toml[default-config.toml].
+
+=== Options
+
+[cols="2,1,4"]
+|===
+| Key | Default | Meaning
+
+| `tags` | `base web dev doc img vid mus eml foo` | The tags every monitor can show. At most 32
+| `default-layout` | `'tile'` | `tile`, `monocle` or `floating`
+| `nmaster` | `1` | How many windows the master area starts with
+| `mfact` | `0.5` | Fraction of the width the master area starts with, between 0.05 and 0.95
+| `start-at-login` | `false` | Register tomwm as a login item
+| `auto-reload-config` | `false` | Reload when the config file is saved
+| `automatically-unhide-macos-hidden-apps` | `false` | Undo the macOS "Hide application" feature
+| `after-startup-command` | `[]` | Commands to run once tomwm has started
+| `on-focus-changed` | `[]` | Commands to run when the focused window changes
+| `on-focused-monitor-changed` | `[]` | Commands to run when the focused monitor changes
+| `on-mode-changed` | `[]` | Commands to run when the binding mode changes
+| `focus-follows-mouse.enabled` | `false` | Focus the window under the pointer
+| `key-mapping.preset` | `'qwerty'` | `qwerty`, `dvorak` or `colemak`
+| `gaps.inner.*`, `gaps.outer.*` | `0` | Space between windows and around the screen edge
+| `mode.<name>.binding` | | Key bindings, see below
+| `on-window-detected` | `[]` | Rules applied to each new window
+|===
+
+=== Bindings
+
+[source,toml]
+----
+[mode.main.binding]
+    alt-j = 'focus next'
+    alt-enter = 'zoom'
+    alt-shift-enter = 'exec-and-forget open -a Terminal'
+    alt-ctrl-1 = 'view base'
+    alt-shift-1 = 'tag base'
+----
+
+Modifiers are `cmd`, `alt`, `ctrl` and `shift`. `main` is the mode that must always exist;
+xref:tomwm-mode.adoc[`mode`] switches to another one, which is how you build a
+vim-style leader layer.
+
+A binding runs a small shell of tomwm commands, so `&&`, `||`, `;` and `|` all work:
+
+[source,toml]
+----
+alt-q = 'test %{window-is-floating} = true && floating off || close'
+----
+
+=== Window rules
+
+`on-window-detected` runs when tomwm first sees a window:
+
+[source,toml]
+----
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = ['floating on']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'slack'
+run = ['tag mus']
+----
+
+Matchers: `if.app-id`, `if.app-name-regex-substring`, `if.window-title-regex-substring`,
+`if.tag`, `if.during-tomwm-startup`, or `if = '<a tomwm command>'` for anything else. Only the
+first matching rule runs unless it sets `check-further-callbacks = true`.
+
+== Gaps
+
+`gaps.outer.*` is the space between the screen edge and the windows; `gaps.inner.*` is the space
+between windows. `inner.horizontal` separates the master column from the stack column, and
+`inner.vertical` separates the windows stacked inside a column.
+
+Every gap can be given per monitor:
+
+[source,toml]
+----
+gaps.outer.top = [{ monitor.main = 16 }, { monitor."built-in" = 8 }, 24]
+----
+
+The last entry is the fallback for monitors nothing else matched.
+
+== Multiple monitors
+
+Each monitor has its own tags, its own layout, and its own `nmaster` and `mfact`. A window belongs
+to exactly one monitor.
+
+* xref:tomwm-focus-monitor.adoc[`focus-monitor`] moves focus between monitors
+* xref:tomwm-move-to-monitor.adoc[`move-to-monitor`] sends the focused window to another one
+
+A window sent to another monitor is re-tagged with the tags that monitor is currently showing, so
+it lands where you are looking. This is dwm's `sendmon`.
+
+When a monitor is unplugged its windows are handed to the main monitor and re-tagged the same way,
+rather than disappearing along with the display.
+
+== Scripting
+
+tomwm is a CLI first. Every binding is a command you can also run from a shell, and the query
+commands are built for scripting:
+
+[source,shell]
+----
+tomwm list-windows --all --format '%{window-id}%{tab}%{window-tags}%{tab}%{app-name}'
+tomwm list-tags --format '%{tag} %{tag-is-selected} %{tag-is-occupied}' --json
+tomwm subscribe tags-changed focus-changed
+----
+
+Callbacks are run with `TOMWM_WINDOW_ID`, `TOMWM_MONITOR` and `TOMWM_TAGS` in the environment;
+see xref:tomwm-list-exec-env-vars.adoc[`list-exec-env-vars`]. `TOMWM_MONITOR` is the one that says
+where a callback came from when no window was focused, so it is the variable to forward when you
+call back into tomwm.

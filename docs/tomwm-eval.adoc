@@ -1,0 +1,46 @@
+= tomwm-eval(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-eval
+// tag::purpose[]
+:manpurpose: Send multiple commands to TomWM at once
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm eval [-h|--help] [--stdin] [--] <tomwm-shell-expr>
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+
+--stdin::
+Capture CLIs stdin and forward it to `<tomwm-shell-expr>`.
+If not supplied, stdin is ignored.
+
+// =========================================================== Arguments
+include::./util/conditional-arguments-header.adoc[]
+
+<tomwm-shell-expr>:: This argument is a tomwm shell expression.
+See xref:guide.adoc#bindings[the guide] for more info.
+
+// =========================================================== Examples
+include::util/conditional-examples-header.adoc[]
+
+* Float the window unless it is already floating, otherwise close it: +
+`tomwm eval 'test %{window-is-floating} = true && close || floating on'`
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

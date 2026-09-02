@@ -1,0 +1,286 @@
+= TomWM Commands
+include::util/site-attributes.adoc[]
+
+include::util/header.adoc[]
+
+Commands documentation is also available as manpages.
+
+== close
+----
+include::tomwm-close.adoc[tags=synopsis]
+----
+include::tomwm-close.adoc[tags=purpose]
+include::tomwm-close.adoc[tags=body]
+
+== close-all-windows-but-current
+----
+include::tomwm-close-all-windows-but-current.adoc[tags=synopsis]
+----
+include::tomwm-close-all-windows-but-current.adoc[tags=purpose]
+include::tomwm-close-all-windows-but-current.adoc[tags=body]
+
+== config
+----
+include::tomwm-config.adoc[tags=synopsis]
+----
+include::tomwm-config.adoc[tags=purpose]
+include::tomwm-config.adoc[tags=body]
+
+== debug-windows
+----
+include::tomwm-debug-windows.adoc[tags=synopsis]
+----
+include::tomwm-debug-windows.adoc[tags=purpose]
+include::tomwm-debug-windows.adoc[tags=body]
+
+== echo
+----
+include::tomwm-echo.adoc[tags=synopsis]
+----
+include::tomwm-echo.adoc[tags=purpose]
+include::tomwm-echo.adoc[tags=body]
+
+== enable
+----
+include::tomwm-enable.adoc[tags=synopsis]
+----
+include::tomwm-enable.adoc[tags=purpose]
+include::tomwm-enable.adoc[tags=body]
+
+== eval
+----
+include::tomwm-eval.adoc[tags=synopsis]
+----
+include::tomwm-eval.adoc[tags=purpose]
+include::tomwm-eval.adoc[tags=body]
+
+== exec-and-forget
+----
+include::tomwm-exec-and-forget.adoc[tags=synopsis]
+----
+include::tomwm-exec-and-forget.adoc[tags=purpose]
+include::tomwm-exec-and-forget.adoc[tags=body]
+
+== false
+----
+include::tomwm-false.adoc[tags=synopsis]
+----
+include::tomwm-false.adoc[tags=purpose]
+include::tomwm-false.adoc[tags=body]
+
+== floating
+----
+include::tomwm-floating.adoc[tags=synopsis]
+----
+include::tomwm-floating.adoc[tags=purpose]
+include::tomwm-floating.adoc[tags=body]
+
+== focus
+----
+include::tomwm-focus.adoc[tags=synopsis]
+----
+include::tomwm-focus.adoc[tags=purpose]
+include::tomwm-focus.adoc[tags=body]
+
+== focus-back-and-forth
+----
+include::tomwm-focus-back-and-forth.adoc[tags=synopsis]
+----
+include::tomwm-focus-back-and-forth.adoc[tags=purpose]
+include::tomwm-focus-back-and-forth.adoc[tags=body]
+
+== focus-monitor
+----
+include::tomwm-focus-monitor.adoc[tags=synopsis]
+----
+include::tomwm-focus-monitor.adoc[tags=purpose]
+include::tomwm-focus-monitor.adoc[tags=body]
+
+== fullscreen
+----
+include::tomwm-fullscreen.adoc[tags=synopsis]
+----
+include::tomwm-fullscreen.adoc[tags=purpose]
+include::tomwm-fullscreen.adoc[tags=body]
+
+== layout
+----
+include::tomwm-layout.adoc[tags=synopsis]
+----
+include::tomwm-layout.adoc[tags=purpose]
+include::tomwm-layout.adoc[tags=body]
+
+== list-apps
+----
+include::tomwm-list-apps.adoc[tags=synopsis]
+----
+include::tomwm-list-apps.adoc[tags=purpose]
+include::tomwm-list-apps.adoc[tags=body]
+
+== list-exec-env-vars
+----
+include::tomwm-list-exec-env-vars.adoc[tags=synopsis]
+----
+include::tomwm-list-exec-env-vars.adoc[tags=purpose]
+include::tomwm-list-exec-env-vars.adoc[tags=body]
+
+== list-modes
+----
+include::tomwm-list-modes.adoc[tags=synopsis]
+----
+include::tomwm-list-modes.adoc[tags=purpose]
+include::tomwm-list-modes.adoc[tags=body]
+
+== list-monitors
+----
+include::tomwm-list-monitors.adoc[tags=synopsis]
+----
+include::tomwm-list-monitors.adoc[tags=purpose]
+include::tomwm-list-monitors.adoc[tags=body]
+
+== list-tags
+----
+include::tomwm-list-tags.adoc[tags=synopsis]
+----
+include::tomwm-list-tags.adoc[tags=purpose]
+include::tomwm-list-tags.adoc[tags=body]
+
+== list-windows
+----
+include::tomwm-list-windows.adoc[tags=synopsis]
+----
+include::tomwm-list-windows.adoc[tags=purpose]
+include::tomwm-list-windows.adoc[tags=body]
+
+== macos-native-fullscreen
+----
+include::tomwm-macos-native-fullscreen.adoc[tags=synopsis]
+----
+include::tomwm-macos-native-fullscreen.adoc[tags=purpose]
+include::tomwm-macos-native-fullscreen.adoc[tags=body]
+
+== macos-native-minimize
+----
+include::tomwm-macos-native-minimize.adoc[tags=synopsis]
+----
+include::tomwm-macos-native-minimize.adoc[tags=purpose]
+include::tomwm-macos-native-minimize.adoc[tags=body]
+
+== mfact
+----
+include::tomwm-mfact.adoc[tags=synopsis]
+----
+include::tomwm-mfact.adoc[tags=purpose]
+include::tomwm-mfact.adoc[tags=body]
+
+== mode
+----
+include::tomwm-mode.adoc[tags=synopsis]
+----
+include::tomwm-mode.adoc[tags=purpose]
+include::tomwm-mode.adoc[tags=body]
+
+== move
+----
+include::tomwm-move.adoc[tags=synopsis]
+----
+include::tomwm-move.adoc[tags=purpose]
+include::tomwm-move.adoc[tags=body]
+
+== move-mouse
+----
+include::tomwm-move-mouse.adoc[tags=synopsis]
+----
+include::tomwm-move-mouse.adoc[tags=purpose]
+include::tomwm-move-mouse.adoc[tags=body]
+
+== move-to-monitor
+----
+include::tomwm-move-to-monitor.adoc[tags=synopsis]
+----
+include::tomwm-move-to-monitor.adoc[tags=purpose]
+include::tomwm-move-to-monitor.adoc[tags=body]
+
+== nmaster
+----
+include::tomwm-nmaster.adoc[tags=synopsis]
+----
+include::tomwm-nmaster.adoc[tags=purpose]
+include::tomwm-nmaster.adoc[tags=body]
+
+== reload-config
+----
+include::tomwm-reload-config.adoc[tags=synopsis]
+----
+include::tomwm-reload-config.adoc[tags=purpose]
+include::tomwm-reload-config.adoc[tags=body]
+
+== run-callback
+----
+include::tomwm-run-callback.adoc[tags=synopsis]
+----
+include::tomwm-run-callback.adoc[tags=purpose]
+include::tomwm-run-callback.adoc[tags=body]
+
+== subscribe
+----
+include::tomwm-subscribe.adoc[tags=synopsis]
+----
+include::tomwm-subscribe.adoc[tags=purpose]
+include::tomwm-subscribe.adoc[tags=body]
+
+== tag
+----
+include::tomwm-tag.adoc[tags=synopsis]
+----
+include::tomwm-tag.adoc[tags=purpose]
+include::tomwm-tag.adoc[tags=body]
+
+== test
+----
+include::tomwm-test.adoc[tags=synopsis]
+----
+include::tomwm-test.adoc[tags=purpose]
+include::tomwm-test.adoc[tags=body]
+
+== test-not
+----
+include::tomwm-test-not.adoc[tags=synopsis]
+----
+include::tomwm-test-not.adoc[tags=purpose]
+include::tomwm-test-not.adoc[tags=body]
+
+== trigger-binding
+----
+include::tomwm-trigger-binding.adoc[tags=synopsis]
+----
+include::tomwm-trigger-binding.adoc[tags=purpose]
+include::tomwm-trigger-binding.adoc[tags=body]
+
+== true
+----
+include::tomwm-true.adoc[tags=synopsis]
+----
+include::tomwm-true.adoc[tags=purpose]
+include::tomwm-true.adoc[tags=body]
+
+== view
+----
+include::tomwm-view.adoc[tags=synopsis]
+----
+include::tomwm-view.adoc[tags=purpose]
+include::tomwm-view.adoc[tags=body]
+
+== volume
+----
+include::tomwm-volume.adoc[tags=synopsis]
+----
+include::tomwm-volume.adoc[tags=purpose]
+include::tomwm-volume.adoc[tags=body]
+
+== zoom
+----
+include::tomwm-zoom.adoc[tags=synopsis]
+----
+include::tomwm-zoom.adoc[tags=purpose]
+include::tomwm-zoom.adoc[tags=body]

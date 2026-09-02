@@ -1,0 +1,111 @@
+{
+  "AXActivationPoint" : "<AXValue 0xc45c81800> {value = x:40.000000 y:56.000000 type = kAXValueCGPointType}",
+  "AXCancelButton" : null,
+  "AXCloseButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXCloseButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXHelp, AXPosition, AXRoleDescription, AXEdited"
+  },
+  "AXDefaultButton" : null,
+  "AXDocument" : null,
+  "AXFocused" : 1,
+  "AXFrame" : "<AXValue 0xc4411d140> {value = x:30.000000 y:40.000000 w:1770.000000 h:1128.000000 type = kAXValueCGRectType}",
+  "AXFullScreen" : 0,
+  "AXFullScreenButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXFullScreenButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXChildren, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "AXGrowArea" : null,
+  "AXMain" : 1,
+  "AXMinimizeButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXMinimizeButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "AXMinimized" : 0,
+  "AXModal" : 0,
+  "AXParent" : "<AXUIElement Application 0xc45557300> {pid=23963}",
+  "AXPosition" : "<AXValue 0xc45013fc0> {value = x:30.000000 y:40.000000 type = kAXValueCGPointType}",
+  "AXProxy" : null,
+  "AXRole" : "AXWindow",
+  "AXSections" : [
+    "{\n    SectionDescription = Content;\n    SectionObject = \"<AXUIElement 0xc45557300> {pid=23963}\";\n    SectionUniqueID = AXContent;\n}"
+  ],
+  "AXSize" : "<AXValue 0xc45c81800> {value = w:1770.000000 h:1128.000000 type = kAXValueCGSizeType}",
+  "AXSubrole" : "AXStandardWindow",
+  "AXTitle" : "Zen Browser",
+  "AXTitleUIElement" : null,
+  "AXToolbarButton" : null,
+  "AXZoomButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXFullScreenButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXChildren, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "TomWM.AXApp" : {
+    "AXExtrasMenuBar" : null,
+    "AXFocusedUIElement" : "AXUIElement(AxWindowId=2621, title=\"\", role=\"AXGroup\", subrole=\"AXUnknown\")",
+    "AXFocusedWindow" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFrame" : null,
+    "AXFrontmost" : 1,
+    "AXFunctionRowTopLevelElements" : [
+
+    ],
+    "AXMainWindow" : "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXMenuBar" : "<AXUIElement 0xc45726b20> {pid=23963}",
+    "AXPosition" : null,
+    "AXRole" : "AXApplication",
+    "AXSize" : null,
+    "AXTitle" : "Zen",
+    "AXWindows" : [
+      "AXUIElement(AxWindowId=2621, title=\"Zen Browser\", role=\"AXWindow\", subrole=\"AXStandardWindow\")"
+    ],
+    "TomWM.AxFailed" : "isWritable.AXFunctionRowTopLevelElements, get.AXFrame, isWritable.AXFrame, get.AXExtrasMenuBar, isWritable.AXExtrasMenuBar, get.AXSize, isWritable.AXSize, get.AXPosition, isWritable.AXPosition",
+    "TomWM.AxIgnored" : "AXChildren, AXChildrenInNavigationOrder, AXEnhancedUserInterface, AXPreferredLanguage, AXRoleDescription, AXHidden",
+    "TomWM.AxWritable" : "AXFrontmost"
+  },
+  "TomWM.App.appBundleId" : "app.zen-browser.zen",
+  "TomWM.App.nsApp.activationPolicy" : "regular",
+  "TomWM.App.nsApp.appBundlePath" : "file:///Applications/Zen.app/",
+  "TomWM.App.nsApp.execPath" : "file:///Applications/Zen.app/Contents/MacOS/zen",
+  "TomWM.App.pid" : 23963,
+  "TomWM.App.version" : "125.11.9",
+  "TomWM.App.versionShort" : "1.17.6b",
+  "TomWM.AxFailed" : "isWritable.AXFrame, get.AXGrowArea, get.AXDocument, isWritable.AXActivationPoint, get.AXProxy, get.AXDefaultButton, get.AXTitleUIElement, get.AXCancelButton, get.AXToolbarButton",
+  "TomWM.AxIgnored" : "AXChildrenInNavigationOrder, AXChildren, AXRoleDescription",
+  "TomWM.AxUiElementWindowType" : "window",
+  "TomWM.AxUiElementWindowType_isDialogHeuristic" : false,
+  "TomWM.AxWritable" : "AXFullScreen, AXPosition, AXSections, AXMain, AXMinimized, AXSize",
+  "TomWM.axWindowId" : 2621,
+  "TomWM.macOS.version" : "Version 26.1 (Build 25B78)",
+  "TomWM.on-window-detected" : [
+
+  ],
+  "TomWM.treeNodeParent" : "Optional(AppBundle.TilingContainer)",
+  "TomWM.windowLevel" : "normalWindow",
+  "TomWM.workspace" : "1"
+}

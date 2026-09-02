@@ -1,0 +1,112 @@
+{
+  "AXActivationPoint" : "<AXValue 0xca507edc0> {value = x:1222.000000 y:45.000000 type = kAXValueCGPointType}",
+  "AXCancelButton" : null,
+  "AXCloseButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXCloseButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle(noValue)",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXHelp, AXPosition, AXRoleDescription, AXEdited"
+  },
+  "AXDefaultButton" : null,
+  "AXDocument" : null,
+  "AXFocused" : 1,
+  "AXFrame" : "<AXValue 0xca6005dc0> {value = x:1152.000000 y:31.000000 w:1152.000000 h:1264.000000 type = kAXValueCGRectType}",
+  "AXFullScreen" : 0,
+  "AXFullScreenButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXFullScreenButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle(noValue)",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXChildren, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "AXGrowArea" : null,
+  "AXMain" : 1,
+  "AXMinimizeButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXMinimizeButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle(noValue)",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "AXMinimized" : 0,
+  "AXModal" : 0,
+  "AXParent" : "<AXUIElement Application 0xca6d33330> {pid=75065}",
+  "AXPosition" : "<AXValue 0xca6ead3e0> {value = x:1152.000000 y:31.000000 type = kAXValueCGPointType}",
+  "AXProxy" : null,
+  "AXRole" : "AXWindow",
+  "AXSections" : [
+    "{\n    SectionDescription = Content;\n    SectionObject = \"<AXUIElement 0xca6d33330> {pid=75065}\";\n    SectionUniqueID = AXContent;\n}"
+  ],
+  "AXSize" : "<AXValue 0xca507edc0> {value = w:1152.000000 h:1264.000000 type = kAXValueCGSizeType}",
+  "AXSubrole" : "AXStandardWindow",
+  "AXTitle" : "Untitled - DrRacket",
+  "AXTitleUIElement" : "AXUIElement(AxWindowId=18469, title=nil, role=\"AXStaticText\", subrole=nil)",
+  "AXToolbarButton" : null,
+  "AXZoomButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXFullScreenButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle(noValue)",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXChildren, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "TomWM.AXApp" : {
+    "AXExtrasMenuBar" : null,
+    "AXFocusedUIElement" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFocusedWindow" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFrame" : null,
+    "AXFrontmost" : 1,
+    "AXFunctionRowTopLevelElements" : [
+
+    ],
+    "AXMainWindow" : "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXMenuBar" : "<AXUIElement 0xca6d304e0> {pid=75065}",
+    "AXPosition" : null,
+    "AXRole" : "AXApplication",
+    "AXSize" : null,
+    "AXTitle" : "DrRacket",
+    "AXWindows" : [
+      "AXUIElement(AxWindowId=18623, title=\"\", role=\"AXWindow\", subrole=\"AXUnknown\")",
+      "AXUIElement(AxWindowId=18469, title=\"Untitled - DrRacket\", role=\"AXWindow\", subrole=\"AXStandardWindow\")"
+    ],
+    "TomWM.AxFailed" : "isWritable.AXFunctionRowTopLevelElements(failure), get.AXFrame(attributeUnsupported), isWritable.AXFrame(failure), get.AXExtrasMenuBar(noValue), isWritable.AXExtrasMenuBar(failure), get.AXSize(attributeUnsupported), isWritable.AXSize(attributeUnsupported), get.AXPosition(attributeUnsupported), isWritable.AXPosition(attributeUnsupported)",
+    "TomWM.AxIgnored" : "AXChildren, AXChildrenInNavigationOrder, AXEnhancedUserInterface, AXPreferredLanguage, AXRoleDescription, AXHidden",
+    "TomWM.AxWritable" : "AXFrontmost"
+  },
+  "TomWM.App.appBundleId" : "org.racket-lang.DrRacket",
+  "TomWM.App.nsApp.activationPolicy" : "regular",
+  "TomWM.App.nsApp.appBundlePath" : "file:///Applications/Racket%20v9.2/DrRacket.app/",
+  "TomWM.App.nsApp.execPath" : "file:///Applications/Racket%20v9.2/DrRacket.app/Contents/MacOS/DrRacket",
+  "TomWM.App.pid" : 75065,
+  "TomWM.App.version" : "9.2",
+  "TomWM.App.versionShort" : "9.2",
+  "TomWM.AxFailed" : "isWritable.AXFrame(failure), get.AXGrowArea(failure), get.AXDocument(noValue), isWritable.AXActivationPoint(failure), get.AXProxy(noValue), get.AXDefaultButton(noValue), get.AXCancelButton(noValue), get.AXToolbarButton(noValue)",
+  "TomWM.AxIgnored" : "AXChildrenInNavigationOrder, AXChildren, AXRoleDescription",
+  "TomWM.AxUiElementWindowType" : "window",
+  "TomWM.AxUiElementWindowType_isDialogHeuristic" : false,
+  "TomWM.AxWritable" : "AXFullScreen, AXPosition, AXSections, AXMain, AXMinimized, AXSize",
+  "TomWM.axWindowId" : 18469,
+  "TomWM.macOS.version" : "Version 26.5.1 (Build 25F80)",
+  "TomWM.on-window-detected" : [
+
+  ],
+  "TomWM.treeNodeParent" : "Optional(AppBundle.TilingContainer)",
+  "TomWM.windowLevel" : "normalWindow",
+  "TomWM.workspace" : "M"
+}

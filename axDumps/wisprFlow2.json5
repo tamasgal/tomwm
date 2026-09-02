@@ -1,0 +1,76 @@
+// WisprFlow changes its activationPolicy during runtime, which confuses the window heuristic
+// This second report is with another activationPolicy
+{
+  "AXActivationPoint" : "<AXValue 0x600003de49f0> {value = x:-1.000000 y:1118.000000 type = kAXValueCGPointType}",
+  "AXCancelButton" : null,
+  "AXCloseButton" : null,
+  "AXDefaultButton" : null,
+  "AXDocument" : "",
+  "AXFocused" : 0,
+  "AXFrame" : "<AXValue 0x60000284f780> {value = x:1727.000000 y:1116.000000 w:440.000000 h:320.000000 type = kAXValueCGRectType}",
+  "AXFullScreen" : 0,
+  "AXFullScreenButton" : null,
+  "AXGrowArea" : null,
+  "AXMain" : 0,
+  "AXMinimizeButton" : null,
+  "AXMinimized" : 0,
+  "AXModal" : 0,
+  "AXParent" : "<AXUIElement Application 0x600003de49f0> {pid=30586}",
+  "AXPosition" : "<AXValue 0x600003cff030> {value = x:1727.000000 y:1116.000000 type = kAXValueCGPointType}",
+  "AXProxy" : null,
+  "AXRole" : "AXWindow",
+  "AXSections" : [
+    "{\n    SectionDescription = Content;\n    SectionObject = \"<AXUIElement 0x600003c88360> {pid=30586}\";\n    SectionUniqueID = AXContent;\n}",
+    "{\n    SectionObject = \"<AXUIElement 0x600003c88750> {pid=30586}\";\n    SectionUniqueID = AXContainer;\n}"
+  ],
+  "AXSize" : "<AXValue 0x600003de49f0> {value = w:440.000000 h:320.000000 type = kAXValueCGSizeType}",
+  "AXSubrole" : "AXDialog",
+  "AXTitle" : "Status",
+  "AXTitleUIElement" : null,
+  "AXToolbarButton" : null,
+  "AXZoomButton" : null,
+  "TomWM.AXApp" : {
+    "AXExtrasMenuBar" : "<AXUIElement 0x600003c2bb10> {pid=30586}",
+    "AXFocusedUIElement" : null,
+    "AXFocusedWindow" : "AXUIElement(AxWindowId=4381, title=\"Hub\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFrame" : null,
+    "AXFrontmost" : 0,
+    "AXFunctionRowTopLevelElements" : [
+
+    ],
+    "AXMainWindow" : "AXUIElement(AxWindowId=4381, title=\"Hub\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXManualAccessibility" : 0,
+    "AXMenuBar" : "<AXUIElement 0x600003de5380> {pid=30586}",
+    "AXPosition" : null,
+    "AXRole" : "AXApplication",
+    "AXSize" : null,
+    "AXTitle" : "Wispr Flow",
+    "AXWindows" : [
+      "AXUIElement(AxWindowId=4379, title=\"Status\", role=\"AXWindow\", subrole=\"AXDialog\")",
+      "AXUIElement(AxWindowId=4381, title=\"Hub\", role=\"AXWindow\", subrole=\"AXStandardWindow\")"
+    ],
+    "TomWM.AxFailed" : "isWritable.AXFunctionRowTopLevelElements(failure), get.AXFrame(attributeUnsupported), isWritable.AXFrame(failure), get.AXFocusedUIElement(noValue), isWritable.AXExtrasMenuBar(failure), get.AXSize(attributeUnsupported), isWritable.AXSize(attributeUnsupported), get.AXPosition(attributeUnsupported), isWritable.AXPosition(attributeUnsupported)",
+    "TomWM.AxIgnored" : "AXChildren, AXChildrenInNavigationOrder, AXEnhancedUserInterface, AXPreferredLanguage, AXRoleDescription, AXHidden",
+    "TomWM.AxWritable" : "AXManualAccessibility, AXFrontmost"
+  },
+  "TomWM.App.appBundleId" : "com.electron.wispr-flow",
+  "TomWM.App.nsApp.activationPolicy" : "regular",
+  "TomWM.App.nsApp.appBundlePath" : "file:///Applications/Wispr%20Flow.app/",
+  "TomWM.App.nsApp.execPath" : "file:///Applications/Wispr%20Flow.app/Contents/MacOS/Wispr%20Flow",
+  "TomWM.App.pid" : 30586,
+  "TomWM.App.version" : "1.6.7",
+  "TomWM.App.versionShort" : "1.6.7",
+  "TomWM.AxFailed" : "isWritable.AXFrame(failure), get.AXGrowArea(failure), get.AXMinimizeButton(noValue), get.AXCloseButton(noValue), isWritable.AXActivationPoint(failure), get.AXFullScreenButton(noValue), get.AXProxy(noValue), get.AXDefaultButton(noValue), get.AXTitleUIElement(noValue), get.AXCancelButton(noValue), get.AXZoomButton(noValue), get.AXToolbarButton(noValue)",
+  "TomWM.AxIgnored" : "AXChildrenInNavigationOrder, AXChildren, AXRoleDescription",
+  "TomWM.AxUiElementWindowType" : "popup",
+  "TomWM.AxUiElementWindowType_isDialogHeuristic" : true,
+  "TomWM.AxWritable" : "AXPosition, AXSections",
+  "TomWM.axWindowId" : 4379,
+  "TomWM.macOS.version" : "...",
+  "TomWM.on-window-detected" : [
+
+  ],
+  "TomWM.treeNodeParent" : "Optional(AppBundle.FloatingWindowsContainer)",
+  "TomWM.windowLevel" : 1000,
+  "TomWM.workspace" : "..."
+}

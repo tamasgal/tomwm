@@ -1,0 +1,44 @@
+= tomwm-zoom(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-zoom
+// tag::purpose[]
+:manpurpose: Promote the focused window to the master area
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm zoom [-h|--help] [--window-id <window-id>] [--monitor <monitor-id>]
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+The master area holds the window that needs attention right now. `zoom` moves the focused window to
+the front of the stack, which puts it in the master area.
+
+If the focused window is already the master, it swaps places with the next tiled window instead, so
+pressing the binding twice returns you to where you were. This is dwm's `zoom`.
+
+The command does nothing when the layout is `floating`, or when the focused window is floating.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+
+--window-id <window-id>::
+include::./util/window-id-flag-desc.adoc[]
+
+--monitor <monitor-id>::
+include::./util/monitor-flag-desc.adoc[]
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

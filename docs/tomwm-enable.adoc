@@ -1,0 +1,37 @@
+= tomwm-enable(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-enable
+// tag::purpose[]
+:manpurpose: Temporarily disable window management
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm enable [-h|--help] toggle
+tomwm enable [-h|--help] on [--fail-if-noop]
+tomwm enable [-h|--help] off [--fail-if-noop]
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+When you disable tomwm, windows parked off screen because their tags are not selected are brought back into the visible area
+
+Key events are not intercepted when TomWM is disabled
+
+// =========================================================== Options
+include::util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--fail-if-noop:: Exit with non-zero exit code if already in the requested mode
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

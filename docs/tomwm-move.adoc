@@ -1,0 +1,38 @@
+= tomwm-move(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-move
+// tag::purpose[]
+:manpurpose: Move the focused window up or down the stack
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm move [-h|--help] [--window-id <window-id>] [--fail-if-noop] (next|prev)
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+Moves the focused window one place forward or backward in the stack, which reorders the tiling
+without changing which window is focused. Use xref:tomwm-zoom.adoc[tomwm-zoom(1)] to jump straight
+to the master area.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--fail-if-noop:: Exit with a non-zero code if the window does not move
+
+--window-id <window-id>::
+include::./util/window-id-flag-desc.adoc[]
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

@@ -1,0 +1,44 @@
+= tomwm-focus(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-focus
+// tag::purpose[]
+:manpurpose: Move focus to another window
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm focus [-h|--help] [--ignore-floating] [--boundaries <boundary>] [--fail-if-noop] (left|down|up|right|next|prev)
+tomwm focus [-h|--help] --window-id <window-id>
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+`next` and `prev` walk the stack, which is the order the tiling layouts use, wrapping around at the
+ends. This is dwm's `focusstack`.
+
+`left`, `down`, `up` and `right` pick the nearest visible window in that direction instead, which
+is often what you want when the stack order is not what you are picturing.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--ignore-floating:: Skip floating windows
+--boundaries <boundary>:: Where directional focus may look. `monitor` or `all-monitors`.
+                          The default is `all-monitors`
+--fail-if-noop:: Exit with a non-zero code if the focus does not move
+
+--window-id <window-id>::
+include::./util/window-id-flag-desc.adoc[]
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

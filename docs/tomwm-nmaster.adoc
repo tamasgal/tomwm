@@ -1,0 +1,42 @@
+= tomwm-nmaster(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-nmaster
+// tag::purpose[]
+:manpurpose: Change how many windows the master area holds
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm nmaster [-h|--help] [--monitor <monitor-id>] <n>
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+`<n>` is relative when it carries an explicit sign and absolute otherwise, so `nmaster +1` adds a
+window to the master area and `nmaster 2` sets it to exactly two. The value never goes below zero;
+with zero, every window goes into the stack area and takes the full width.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+
+--monitor <monitor-id>::
+include::./util/monitor-flag-desc.adoc[]
+
+// =========================================================== Arguments
+include::./util/conditional-arguments-header.adoc[]
+
+<n>:: `+<n>` or `-<n>` to change the count, `<n>` to set it
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

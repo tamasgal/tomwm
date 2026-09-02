@@ -1,0 +1,75 @@
+// Steam is weird. It shows one visible window, but creates 2 AX objects.
+// tomwm has to deliberately ignore the redundant AX object to avoid weird focus issues
+// ./steam_1.json5 -- valid AX object
+// ./steam_2.json5 -- weird AX object
+{
+  "AXActivationPoint" : "<AXValue 0xca6f7c2d0> {value = x:-1.000000 y:1297.000000 type = kAXValueCGPointType}",
+  "AXCancelButton" : null,
+  "AXCloseButton" : null,
+  "AXDefaultButton" : null,
+  "AXDocument" : null,
+  "AXFocused" : 0,
+  "AXFrame" : "<AXValue 0xca6edf600> {value = x:1152.000000 y:31.000000 w:1152.000000 h:1264.000000 type = kAXValueCGRectType}",
+  "AXFullScreen" : 0,
+  "AXFullScreenButton" : null,
+  "AXGrowArea" : null,
+  "AXMain" : 1,
+  "AXMinimizeButton" : null,
+  "AXMinimized" : 0,
+  "AXModal" : 0,
+  "AXParent" : "<AXUIElement Application 0xca6f714d0> {pid=86598}",
+  "AXPosition" : "<AXValue 0xca6f7d8f0> {value = x:1152.000000 y:31.000000 type = kAXValueCGPointType}",
+  "AXProxy" : null,
+  "AXRole" : "AXWindow",
+  "AXSections" : [
+
+  ],
+  "AXSize" : "<AXValue 0xca6f7ea00> {value = w:1152.000000 h:1264.000000 type = kAXValueCGSizeType}",
+  "AXSubrole" : "AXStandardWindow",
+  "AXTitle" : "Steam",
+  "AXTitleUIElement" : null,
+  "AXToolbarButton" : null,
+  "AXZoomButton" : null,
+  "TomWM.AXApp" : {
+    "AXExtrasMenuBar" : null,
+    "AXFocusedUIElement" : null,
+    "AXFocusedWindow" : "AXUIElement(AxWindowId=18969, title=\"Steam\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFrame" : null,
+    "AXFrontmost" : 1,
+    "AXFunctionRowTopLevelElements" : [
+
+    ],
+    "AXMainWindow" : "AXUIElement(AxWindowId=18969, title=\"Steam\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXMenuBar" : null,
+    "AXPosition" : null,
+    "AXRole" : "AXApplication",
+    "AXSize" : null,
+    "AXTitle" : "Steam Helper",
+    "AXWindows" : [
+      "AXUIElement(AxWindowId=18969, title=\"Steam\", role=\"AXWindow\", subrole=\"AXStandardWindow\")"
+    ],
+    "TomWM.AxFailed" : "isWritable.AXFunctionRowTopLevelElements(failure), get.AXFrame(attributeUnsupported), isWritable.AXFrame(failure), get.AXFocusedUIElement(noValue), get.AXExtrasMenuBar(noValue), isWritable.AXExtrasMenuBar(failure), get.AXMenuBar(noValue), get.AXSize(attributeUnsupported), isWritable.AXSize(attributeUnsupported), get.AXPosition(attributeUnsupported), isWritable.AXPosition(attributeUnsupported)",
+    "TomWM.AxIgnored" : "AXChildren, AXChildrenInNavigationOrder, AXEnhancedUserInterface, AXPreferredLanguage, AXRoleDescription, AXHidden",
+    "TomWM.AxWritable" : "AXFrontmost"
+  },
+  "TomWM.App.appBundleId" : "com.valvesoftware.steam.helper",
+  "TomWM.App.nsApp.activationPolicy" : "accessory",
+  "TomWM.App.nsApp.appBundlePath" : "file:///Users/bobko/Library/Application%20Support/Steam/Steam.AppBundle/Steam/Contents/Frameworks/Steam%20Helper.app/",
+  "TomWM.App.nsApp.execPath" : "file:///Users/bobko/Library/Application%20Support/Steam/Steam.AppBundle/Steam/Contents/Frameworks/Steam%20Helper.app/Contents/MacOS/Steam%20Helper",
+  "TomWM.App.pid" : 86598,
+  "TomWM.App.version" : "1650.57",
+  "TomWM.App.versionShort" : "31.0.1650.57",
+  "TomWM.AxFailed" : "isWritable.AXFrame(failure), get.AXGrowArea(failure), get.AXMinimizeButton(noValue), get.AXDocument(noValue), get.AXCloseButton(noValue), isWritable.AXActivationPoint(failure), get.AXFullScreenButton(noValue), get.AXProxy(noValue), get.AXDefaultButton(noValue), get.AXTitleUIElement(noValue), get.AXCancelButton(noValue), get.AXZoomButton(noValue), get.AXToolbarButton(noValue)",
+  "TomWM.AxIgnored" : "AXChildrenInNavigationOrder, AXChildren, AXRoleDescription",
+  "TomWM.AxUiElementWindowType" : "window",
+  "TomWM.AxUiElementWindowType_isDialogHeuristic" : false,
+  "TomWM.AxWritable" : "AXFullScreen, AXPosition, AXSections, AXMain, AXMinimized, AXSize",
+  "TomWM.axWindowId" : 18969,
+  "TomWM.macOS.version" : "Version 26.5.1 (Build 25F80)",
+  "TomWM.on-window-detected" : [
+
+  ],
+  "TomWM.treeNodeParent" : "Optional(AppBundle.TilingContainer)",
+  "TomWM.windowLevel" : "normalWindow",
+  "TomWM.workspace" : "M"
+}

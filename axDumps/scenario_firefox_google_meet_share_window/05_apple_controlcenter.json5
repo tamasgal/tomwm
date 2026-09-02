@@ -1,0 +1,36 @@
+{
+  "TomWM.AXApp" : {
+    "AXExtrasMenuBar" : "<AXUIElement 0x600003383ed0> {pid=562}",
+    "AXFocusedUIElement" : "AXUIElement(AxWindowId=385, title=nil, role=\"AXGroup\", subrole=\"AXHostingView\")",
+    "AXFocusedWindow" : "AXUIElement(AxWindowId=385, title=nil, role=\"AXWindow\", subrole=\"AXSystemDialog\")",
+    "AXFrame" : null,
+    "AXFrontmost" : 1,
+    "AXFunctionRowTopLevelElements" : [
+
+    ],
+    "AXMainWindow" : null,
+    "AXMenuBar" : null,
+    "AXPosition" : null,
+    "AXRole" : "AXApplication",
+    "AXSize" : null,
+    "AXTitle" : "Control Centre",
+    "AXWindows" : [
+
+    ],
+    "TomWM.AxIgnored" : "AXChildren, AXChildrenInNavigationOrder, AXEnhancedUserInterface, AXPreferredLanguage, AXRoleDescription, AXHidden"
+  },
+  "TomWM.App.appBundleId" : "com.apple.controlcenter",
+  "TomWM.App.nsApp.activationPolicy" : "accessory",
+  "TomWM.App.nsApp.execPath" : "file:///System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter",
+  "TomWM.App.version" : "1",
+  "TomWM.App.versionShort" : "1.0",
+  "TomWM.AxUiElementWindowType" : "popup",
+  "TomWM.AxUiElementWindowType_isDialogHeuristic" : true,
+  "TomWM.axWindowId" : 15,
+  "TomWM.macOS.version" : "Version 15.5 (Build 24F74)",
+  "TomWM.on-window-detected" : [
+
+  ],
+  "TomWM.treeNodeParent" : "Optional(AppBundle.TilingContainer)",
+  "TomWM.workspace" : "F"
+}

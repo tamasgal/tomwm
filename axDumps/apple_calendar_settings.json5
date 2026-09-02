@@ -1,0 +1,103 @@
+{
+  "AXActivationPoint" : "<AXValue 0x9780372a0> {value = x:615.000000 y:185.000000 type = kAXValueCGPointType}",
+  "AXCancelButton" : null,
+  "AXCloseButton" : {
+    "AXEnabled" : 1,
+    "AXParent" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXCloseButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXHelp, AXPosition, AXRoleDescription, AXEdited"
+  },
+  "AXDefaultButton" : null,
+  "AXDocument" : null,
+  "AXFocused" : 1,
+  "AXFrame" : "<AXValue 0x978c09c80> {value = x:585.000000 y:169.000000 w:629.000000 h:646.000000 type = kAXValueCGRectType}",
+  "AXFullScreen" : 0,
+  "AXFullScreenButton" : null,
+  "AXGrowArea" : null,
+  "AXMain" : 1,
+  "AXMinimizeButton" : {
+    "AXEnabled" : 0,
+    "AXParent" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXMinimizeButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "AXMinimized" : 0,
+  "AXModal" : 0,
+  "AXParent" : "<AXUIElement Application 0x97809dc80> {pid=93809}",
+  "AXPosition" : "<AXValue 0x9788d4960> {value = x:585.000000 y:169.000000 type = kAXValueCGPointType}",
+  "AXProxy" : null,
+  "AXRole" : "AXWindow",
+  "AXSections" : [
+    "{\n    SectionDescription = Toolbar;\n    SectionObject = \"<AXUIElement 0x97809d350> {pid=93809}\";\n    SectionUniqueID = AXToolbar;\n}",
+    "{\n    SectionDescription = Content;\n    SectionObject = \"<AXUIElement 0x97809dc80> {pid=93809}\";\n    SectionUniqueID = AXContent;\n}"
+  ],
+  "AXSize" : "<AXValue 0x978037240> {value = w:629.000000 h:646.000000 type = kAXValueCGSizeType}",
+  "AXSubrole" : "AXStandardWindow",
+  "AXTitle" : "General",
+  "AXTitleUIElement" : "AXUIElement(AxWindowId=4740, title=nil, role=\"AXStaticText\", subrole=nil)",
+  "AXToolbarButton" : null,
+  "AXZoomButton" : {
+    "AXEnabled" : 0,
+    "AXParent" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXRole" : "AXButton",
+    "AXSubrole" : "AXZoomButton",
+    "AXTitle" : null,
+    "AXTopLevelUIElement" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXWindow" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "TomWM.AxFailed" : "get.AXTitle",
+    "TomWM.AxIgnored" : "AXFrame, AXSize, AXFocused, AXChildren, AXHelp, AXPosition, AXRoleDescription"
+  },
+  "TomWM.AXApp" : {
+    "AXExtrasMenuBar" : null,
+    "AXFocusedUIElement" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFocusedWindow" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXFrame" : null,
+    "AXFrontmost" : 1,
+    "AXFunctionRowTopLevelElements" : [
+
+    ],
+    "AXMainWindow" : "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+    "AXMenuBar" : "<AXUIElement 0x97809dc80> {pid=93809}",
+    "AXPosition" : null,
+    "AXRole" : "AXApplication",
+    "AXSize" : null,
+    "AXTitle" : "Calendar",
+    "AXWindows" : [
+      "AXUIElement(AxWindowId=4740, title=\"General\", role=\"AXWindow\", subrole=\"AXStandardWindow\")",
+      "AXUIElement(AxWindowId=4739, title=\"Calendar\", role=\"AXWindow\", subrole=\"AXStandardWindow\")"
+    ],
+    "TomWM.AxFailed" : "isWritable.AXFunctionRowTopLevelElements, get.AXFrame, isWritable.AXFrame, get.AXExtrasMenuBar, isWritable.AXExtrasMenuBar, get.AXSize, isWritable.AXSize, get.AXPosition, isWritable.AXPosition",
+    "TomWM.AxIgnored" : "AXChildren, AXChildrenInNavigationOrder, AXEnhancedUserInterface, AXPreferredLanguage, AXRoleDescription, AXHidden",
+    "TomWM.AxWritable" : "AXFrontmost"
+  },
+  "TomWM.App.appBundleId" : "com.apple.iCal",
+  "TomWM.App.nsApp.activationPolicy" : "regular",
+  "TomWM.App.nsApp.appBundlePath" : "file:///System/Applications/Calendar.app/",
+  "TomWM.App.nsApp.execPath" : "file:///System/Applications/Calendar.app/Contents/MacOS/Calendar",
+  "TomWM.App.pid" : 93809,
+  "TomWM.App.version" : "3036.1.8",
+  "TomWM.App.versionShort" : "16.0",
+  "TomWM.AxFailed" : "isWritable.AXFrame, get.AXGrowArea, get.AXDocument, isWritable.AXActivationPoint, get.AXFullScreenButton, get.AXProxy, get.AXDefaultButton, get.AXCancelButton, get.AXToolbarButton",
+  "TomWM.AxIgnored" : "AXChildrenInNavigationOrder, AXChildren, AXRoleDescription",
+  "TomWM.AxUiElementWindowType" : "dialog",
+  "TomWM.AxUiElementWindowType_isDialogHeuristic" : true,
+  "TomWM.AxWritable" : "AXPosition, AXSections, AXMain",
+  "TomWM.axWindowId" : 4740,
+  "TomWM.macOS.version" : "Version 26.1 (Build 25B78)",
+  "TomWM.on-window-detected" : [
+
+  ],
+  "TomWM.treeNodeParent" : "Optional(AppBundle.Workspace)",
+  "TomWM.windowLevel" : "normalWindow",
+  "TomWM.workspace" : "M"
+}

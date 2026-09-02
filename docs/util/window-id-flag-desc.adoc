@@ -1,0 +1,2 @@
+Act on the specified window instead of the focused window.
+The flag takes precedence over the `TOMWM_WINDOW_ID` and `TOMWM_MONITOR` environment variables.

@@ -1,0 +1,48 @@
+= tomwm-floating(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-floating
+// tag::purpose[]
+:manpurpose: Float or unfloat the focused window
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm floating [-h|--help] [--window-id <window-id>] [--fail-if-noop] [on|off]
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+A floating window keeps whatever position and size you give it and is ignored by the tiling
+layouts.
+
+Dialogs are always managed floating and cannot be tiled, so the command fails on them. Which
+windows count as dialogs is decided by an Accessibility heuristic; see
+xref:tomwm-debug-windows.adoc[tomwm-debug-windows(1)] if you disagree with its verdict for some
+application.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--fail-if-noop:: Exit with a non-zero code if the window is already in the requested state
+
+--window-id <window-id>::
+include::./util/window-id-flag-desc.adoc[]
+
+// =========================================================== Arguments
+include::./util/conditional-arguments-header.adoc[]
+
+on:: Float the window
+off:: Tile the window
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

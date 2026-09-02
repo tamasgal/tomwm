@@ -1,0 +1,40 @@
+= tomwm-list-tags(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-list-tags
+// tag::purpose[]
+:manpurpose: Print the tags
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm list-tags [-h|--help] [--monitor <monitor-id>...] [--selected [no]] [--occupied [no]] [--format <output-format>]
+tomwm list-tags [-h|--help] [--monitor <monitor-id>...] [--selected [no]] [--occupied [no]] [--count]
+tomwm list-tags [-h|--help] [--monitor <monitor-id>...] [--selected [no]] [--occupied [no]] [--json]
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--selected [no]:: Filter the tags currently shown on the monitor
+--occupied [no]:: Filter the tags that hold at least one window
+--format <output-format>:: Specify the output format
+--count:: Print the number of tags instead of the tags themselves
+--json:: Print the result in JSON format
+
+--monitor <monitor-id>::
+include::./util/monitor-flag-desc.adoc[]
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

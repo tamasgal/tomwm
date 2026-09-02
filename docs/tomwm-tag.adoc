@@ -1,0 +1,47 @@
+= tomwm-tag(1)
+include::util/man-attributes.adoc[]
+:manname: tomwm-tag
+// tag::purpose[]
+:manpurpose: Set the tags of the focused window
+// end::purpose[]
+
+// =========================================================== Synopsis
+== Synopsis
+[verse]
+// tag::synopsis[]
+tomwm tag [-h|--help] [--window-id <window-id>] [--toggle] <tag>...
+tomwm tag [-h|--help] [--window-id <window-id>] [--toggle] --index <n>...
+tomwm tag [-h|--help] [--window-id <window-id>] --all
+
+// end::synopsis[]
+
+// =========================================================== Description
+== Description
+
+// tag::body[]
+{manpurpose}
+
+The window keeps the tags it is given until they are changed again. A window always carries at
+least one tag, so a request that would leave it with none is refused.
+
+// =========================================================== Options
+include::./util/conditional-options-header.adoc[]
+
+-h, --help:: Print help
+--toggle:: Add the tags the window does not carry, remove the ones it does
+--all:: Give the window every tag, so it is visible whatever is selected
+--index <n>:: Name the tags by their 1-based position in the `tags` config option instead of by
+              name. Key bindings should prefer this: renaming a tag then costs nothing
+
+--window-id <window-id>::
+include::./util/window-id-flag-desc.adoc[]
+
+// =========================================================== Arguments
+include::./util/conditional-arguments-header.adoc[]
+
+<tag>:: A tag name, as declared by the `tags` config option
+
+// end::body[]
+
+// =========================================================== Footer
+include::util/man-footer.adoc[]

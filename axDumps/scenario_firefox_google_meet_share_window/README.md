@@ -1,0 +1,8 @@
+1. Open Firefox
+2. https://meet.google.com/
+3. Create an instant meeting
+4. Select the current Firefox window
+
+During these steps the user encounters 7 (!) different small popups.
+
+Including the share purple "pill" indicator in the window's top left corner
