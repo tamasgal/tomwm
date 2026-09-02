@@ -2,7 +2,7 @@
 
 <img src="./resources/Assets.xcassets/AppIcon.appiconset/icon.png" width="30%" align="right">
 
-**T**om's **O**pinionated **M**acos **W**indow **M**anager. A dynamic window manager for macOS in the
+**T**om's **o**pinionated **m**acOS **W**indow **M**anager. A dynamic window manager for macOS in the
 spirit of [dwm](https://dwm.suckless.org/), with a bit of ommmmm.
 
 tomwm is not a port of dwm, it is dwm's model on macOS: no tree, no nested splits, no per-window
