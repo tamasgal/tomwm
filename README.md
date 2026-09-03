@@ -9,6 +9,9 @@ tomwm is not a port of dwm, it is dwm's model on macOS: no tree, no nested split
 weights. There is a master area and a stacking area, there are tags, and there are three layouts.
 That is the whole thing. The defaults will be my personal preferences and some things will simply
 be not implemented or changed (sorry for that in advance ;) -> it's opinionated haha.
+The jump start was given by the code base of
+[AeroSpace by Nikita Bobko](https://github.com/nikitabobko/AeroSpace), which was my
+preferred window manager for the past years.
 Feel free to fork and make it your own, everything is MIT and stands on the shoulder of giants.
 
 ## The model
