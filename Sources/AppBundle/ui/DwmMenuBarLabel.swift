@@ -17,20 +17,25 @@ struct DwmMenuBarLabel: View {
     let boxed: Bool
     let color: Color
 
-    /// The tallest label macOS draws without cutting it. Measured with real status items:
-    /// NSStatusBar.system.thickness reports 22pt, but a 24pt label still renders in full while a
-    /// 26pt one loses both its top and bottom edge.
-    static let maxLabelHeight: CGFloat = 24
+    /// The tallest label macOS draws without cutting it, which is the menu bar's own height rather
+    /// than the 22pt NSStatusBar.system.thickness advertises. Measured with real status items: 23,
+    /// 24 and 25pt labels render in full, 26pt loses both its top and bottom edge.
+    static let maxLabelHeight: CGFloat = 25
 
-    /// macOS clips the label rather than scaling it, so the type cannot grow past what
-    /// `maxLabelHeight` allows once the cell padding is counted. `cellHeight` follows the font, so
-    /// changing this alone stays consistent, but anything above roughly 17pt starts losing glyphs.
-    private let fontSize: CGFloat = 18
-    private var cellHeight: CGFloat { min((fontSize * 1.34).rounded(), Self.maxLabelHeight) }
+    /// macOS clips the label rather than scaling it, so the type can only grow until the glyphs
+    /// stop fitting. A font's line box here is its ascender-to-descender span with no leading to
+    /// reclaim, so 21pt (a 24.7pt span) is the largest that fits; 22pt needs 25.9pt and is cut.
+    private let fontSize: CGFloat = 21
+    /// Driven by the real font metrics so the layout stays consistent if fontSize changes
+    private var cellHeight: CGFloat {
+        let font = NSFont.systemFont(ofSize: fontSize, weight: .semibold)
+        return min((font.ascender - font.descender).rounded(.up), Self.maxLabelHeight)
+    }
     private var cellPadding: CGFloat { fontSize * 0.22 }
-    /// dwm's boxs and boxw: the occupancy marker in the top left of a tag
-    private var markerInset: CGFloat { fontSize * 0.085 }
-    private var markerSize: CGFloat { fontSize * 0.22 }
+    /// dwm's boxs and boxw: the occupancy marker in the top left of a tag. Sized to sit inside the
+    /// cell's left padding so it never lands on an ascender.
+    private var markerInset: CGFloat { fontSize * 0.04 }
+    private var markerSize: CGFloat { fontSize * 0.16 }
 
     var body: some View {
         HStack(spacing: fontSize * 0.42) {
@@ -55,7 +60,6 @@ struct DwmMenuBarLabel: View {
             .fontWidth(.compressed)
             .fixedSize()
             .padding(.horizontal, cellPadding)
-            .padding(.top, markerSize * 0.7)
             .frame(height: cellHeight)
         if tag.isSelected {
             ZStack {
@@ -73,10 +77,13 @@ struct DwmMenuBarLabel: View {
                 .opacity(tag.isOccupied ? 0.85 : 0.35)
                 .background {
                     if boxed {
+                        // Inset, because a stroke on the full cell height lands on the image edge
+                        // and macOS clips it away
                         RoundedRectangle(cornerRadius: 4, style: .continuous)
                             .strokeBorder(lineWidth: 1.2)
                             .foregroundStyle(color)
                             .opacity(tag.isOccupied ? 0.75 : 0.25)
+                            .padding(0.75)
                     }
                 }
                 .overlay(alignment: .topLeading) { if tag.isOccupied { marker.foregroundStyle(color) } }
@@ -105,7 +112,7 @@ struct DwmMenuBarLabel: View {
 
     private func layoutIcon(_ layout: TomLayout) -> some View {
         Image(systemName: layout.systemImageName)
-            .font(.system(size: fontSize * 1.2))
+            .font(.system(size: fontSize * 1.1))
             .foregroundStyle(color)
     }
 

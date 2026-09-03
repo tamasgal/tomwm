@@ -45,7 +45,7 @@ final class DwmMenuBarLabelTest: XCTestCase {
                 let width = Int((image.size.width + statusItemPadding).rounded())
                 // Every tag is always shown, so the width is driven by the tag names, not by state.
                 // A loose bound: it is here to notice unintended growth, not as a design target.
-                XCTAssertLessThan(width, 400, "\(style.rawValue) is \(width)pt wide in scenario \(title)")
+                XCTAssertLessThan(width, 450, "\(style.rawValue) is \(width)pt wide in scenario \(title)")
                 lines.append(title.padding(toLength: 34, withPad: " ", startingAt: 0)
                     + style.rawValue.padding(toLength: 18, withPad: " ", startingAt: 0)
                     + "\(width)pt")
