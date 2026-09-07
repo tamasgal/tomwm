@@ -82,16 +82,39 @@ else
 fi'''
 
     # A new Safari window
-    alt-shift-v = '''exec-and-forget
+    alt-shift-s = '''exec-and-forget
 osascript -e 'tell application "Safari" to make new document' -e 'tell application "Safari" to activate' '''
 
-    # A new Chrome window, falling back to Safari when Chrome is not installed
-    alt-shift-w = '''exec-and-forget
-if [ -d "/Applications/Google Chrome.app" ] || [ -d "$HOME/Applications/Google Chrome.app" ]; then
-    osascript -e 'tell application "Google Chrome" to make new window' -e 'tell application "Google Chrome" to activate'
+    # A new Chrome window
+    alt-shift-c = '''exec-and-forget
+osascript -e 'tell application "Google Chrome" to make new window' -e 'tell application "Google Chrome" to activate' '''
+
+    # A new Finder window
+    alt-shift-f = '''exec-and-forget
+osascript -e 'tell application "Finder" to make new Finder window' -e 'tell application "Finder" to activate' '''
+
+    # The Mail app
+    alt-shift-m = 'exec-and-forget open -a Mail'
+
+    # A new iTerm2 window running aerc. Terminal if iTerm2 is not installed.
+    alt-shift-a = '''exec-and-forget
+if [ -d /Applications/iTerm.app ] || [ -d "$HOME/Applications/iTerm.app" ]; then
+    osascript -e 'tell application "iTerm"' -e 'set w to (create window with default profile)' -e 'tell current session of w to write text "aerc"' -e 'end tell'
 else
-    osascript -e 'tell application "Safari" to make new document' -e 'tell application "Safari" to activate'
+    osascript -e 'tell application "Terminal" to do script "aerc"' -e 'tell application "Terminal" to activate'
 fi'''
+
+    # The Notes app
+    alt-shift-n = 'exec-and-forget open -a Notes'
+
+    # The Calendar app
+    alt-shift-e = 'exec-and-forget open -a Calendar'
+
+    # Rocket.Chat, by bundle id: the dotted name does not resolve with 'open -a'
+    alt-shift-r = 'exec-and-forget open -b chat.rocket'
+
+    # The Claude app
+    alt-shift-l = 'exec-and-forget open -a Claude'
 
     # ============================================================ Windows
 
@@ -113,7 +136,7 @@ fi'''
     alt-i = 'nmaster +1'
     alt-d = 'nmaster -1'
 
-    alt-shift-c = 'close'
+    # alt-shift-c = 'close'  # CMD+W is already there on macOS ;)
 
     # ============================================================ Layouts
 
