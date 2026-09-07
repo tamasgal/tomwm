@@ -47,8 +47,15 @@ recorded window dumps in `axDumps/`.
 | Binding           | Action                                      |
 |-------------------|---------------------------------------------|
 | `alt-shift-enter` | new terminal window (iTerm2, else Terminal) |
-| `alt-shift-v`     | new Safari window                           |
-| `alt-shift-w`     | new Chrome window (falls back to Safari)    |
+| `alt-shift-s`     | new Safari window                           |
+| `alt-shift-c`     | new Chrome window                           |
+| `alt-shift-f`     | new Finder window                           |
+| `alt-shift-m`     | the Mail app                                |
+| `alt-shift-a`     | new iTerm2 window running `aerc`            |
+| `alt-shift-n`     | the Notes app                               |
+| `alt-shift-e`     | the Calendar app                            |
+| `alt-shift-r`     | Rocket.Chat                                 |
+| `alt-shift-l`     | the Claude app                              |
 
 ### Windows
 
@@ -63,7 +70,6 @@ recorded window dumps in `axDumps/`.
 | `alt-l`       | grow the master area                                           |
 | `alt-i`       | one more window in the master area                             |
 | `alt-d`       | one fewer window in the master area                            |
-| `alt-shift-c` | close the focused window                                       |
 
 ### Layouts
 
