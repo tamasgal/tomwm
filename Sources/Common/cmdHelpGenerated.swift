@@ -45,7 +45,7 @@ let focus_monitor_help_generated = """
        OR: focus-monitor [-h|--help] [--] <monitor-pattern>...
     """
 let focus_help_generated = """
-    USAGE: focus [-h|--help] [--ignore-floating] [--boundaries <boundary>] [--fail-if-noop] (left|down|up|right|next|prev)
+    USAGE: focus [-h|--help] [--ignore-floating] [--boundaries <boundary>] [--fail-if-noop] (left|down|up|right|next|prev|master)
        OR: focus [-h|--help] --window-id <window-id>
     """
 let fullscreen_help_generated = """

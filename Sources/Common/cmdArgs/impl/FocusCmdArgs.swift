@@ -39,8 +39,9 @@ public struct FocusCmdArgs: CmdArgs {
 public enum FocusDirection: Equatable, Sendable {
     case stack(NextPrev)
     case cardinal(CardinalDirection)
+    case master
 
-    public static let unionLiteral = "left|down|up|right|next|prev"
+    public static let unionLiteral = "left|down|up|right|next|prev|master"
 }
 
 extension FocusCmdArgs {
@@ -51,6 +52,7 @@ func parseFocusDirection(i: PosArgParserInput) -> ParsedCliArgs<FocusDirection> 
     switch i.arg {
         case "next": return .succ(.stack(.next), advanceBy: 1)
         case "prev": return .succ(.stack(.prev), advanceBy: 1)
+        case "master": return .succ(.master, advanceBy: 1)
         default:
             return switch parseEnum(i.arg, CardinalDirection.self) {
                 case .success(let dir): .succ(.cardinal(dir), advanceBy: 1)

@@ -16,6 +16,7 @@ struct FocusCommand: Command {
         let result: Window? = switch direction {
             case .stack(let nextPrev): stackNeighbour(target, nextPrev)
             case .cardinal(let cardinal): cardinalNeighbour(target, cardinal)
+            case .master: masterBackAndForth(target)
         }
         guard let result else {
             return args.failIfNoop ? .fail : .succ(io.err("No window to focus"))
@@ -35,6 +36,16 @@ struct FocusCommand: Command {
         let step = nextPrev == .next ? 1 : -1
         let next = (index + step + candidates.count) % candidates.count
         return candidates[next] != current ? candidates[next] : nil
+    }
+
+    /// Focus the master. On the master, return to the most recently focused tiled window instead.
+    @MainActor
+    private func masterBackAndForth(_ target: LiveFocus) -> Window? {
+        let state = target.monitorState
+        let tiled = state.tiledClients
+        guard let master = tiled.first else { return nil }
+        guard target.windowOrNil == master else { return master }
+        return state.focusStack.first { $0 != master && tiled.contains($0) } ?? tiled.getOrNil(atIndex: 1)
     }
 
     /// Pick the nearest visible window in the given direction, by the rect the last arrange applied

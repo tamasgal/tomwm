@@ -121,6 +121,7 @@ fi'''
     # Walk the stack (dwm focusstack)
     alt-j = 'focus next'
     alt-k = 'focus prev'
+    alt-o = 'focus master'
 
     # Move the focused window down or up the stack, without changing the focus
     alt-shift-j = 'move next'

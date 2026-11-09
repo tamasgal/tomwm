@@ -63,6 +63,7 @@ recorded window dumps in `axDumps/`.
 |---------------|---------------------------------------------------------------|
 | `alt-j`       | focus the next window in the stack                             |
 | `alt-k`       | focus the previous window in the stack                         |
+| `alt-o`       | focus the master, or go back to the last stack window          |
 | `alt-shift-j` | move the focused window down the stack                         |
 | `alt-shift-k` | move the focused window up the stack                           |
 | `alt-enter`   | `zoom`: promote the focused window to master, or swap it back  |
@@ -126,6 +127,7 @@ tomwm tag  [--toggle] <tag>...      retag the focused window (dwm tag / toggleta
 tomwm tag  [--toggle] --index <n>.. same, by 1-based position
 tomwm zoom                          promote the focused window to master
 tomwm focus next|prev               walk the stack (dwm focusstack)
+tomwm focus master                  focus the master, or back to the last stack window
 tomwm focus left|down|up|right      directional focus, unbound by default
 tomwm move next|prev                reorder the focused window in the stack
 tomwm nmaster +1|-1|<n>             resize the master area by window count

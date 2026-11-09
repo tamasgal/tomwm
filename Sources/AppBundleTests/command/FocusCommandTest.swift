@@ -11,16 +11,17 @@ final class FocusCommandTest: XCTestCase {
     func testParse() {
         testParseSingleCommandSucc("focus next", FocusCmdArgs(rawArgs: ["next"], direction: .stack(.next)))
         testParseSingleCommandSucc("focus prev", FocusCmdArgs(rawArgs: ["prev"], direction: .stack(.prev)))
+        testParseSingleCommandSucc("focus master", FocusCmdArgs(rawArgs: ["master"], direction: .master))
         testParseSingleCommandSucc("focus left", FocusCmdArgs(rawArgs: ["left"], direction: .cardinal(.left)))
         testParseSingleCommandSucc("focus --window-id 42", FocusCmdArgs(rawArgs: ["--window-id", "42"], windowId: 42))
 
         assertEquals(
             parseCommand("focus").errorOrNil,
-            "Mandatory argument is missing. left|down|up|right|next|prev or --window-id is required",
+            "Mandatory argument is missing. left|down|up|right|next|prev|master or --window-id is required",
         )
         assertEquals(
             parseCommand("focus bogus").errorOrNil,
-            "ERROR: Can't parse 'bogus'\n       Possible values: left|down|up|right|next|prev",
+            "ERROR: Can't parse 'bogus'\n       Possible values: left|down|up|right|next|prev|master",
         )
         assertEquals(
             parseCommand("focus --window-id 42 left").errorOrNil,
@@ -39,6 +40,30 @@ final class FocusCommandTest: XCTestCase {
 
         await parseCommand("focus next").cmdOrDie.run(.defaultEnv, .emptyStdin)
         assertEquals(focused, 3)
+    }
+
+    func testFocusMasterBackAndForth() async {
+        let windows = newWindows([1, 2, 3])
+        _ = windows[2].focusWindow()
+
+        await parseCommand("focus master").cmdOrDie.run(.defaultEnv, .emptyStdin)
+        assertEquals(focused, 1)
+
+        await parseCommand("focus master").cmdOrDie.run(.defaultEnv, .emptyStdin)
+        assertEquals(focused, 3)
+
+        await parseCommand("focus master").cmdOrDie.run(.defaultEnv, .emptyStdin)
+        assertEquals(focused, 1)
+    }
+
+    func testFocusMasterSkipsInvisibleWindows() async {
+        let windows = newWindows([1, 2, 3])
+        _ = windows[2].focusWindow()
+        _ = windows[0].focusWindow()
+        windows[2].tags = TagMask(index: 7)
+
+        await parseCommand("focus master").cmdOrDie.run(.defaultEnv, .emptyStdin)
+        assertEquals(focused, 2)
     }
 
     func testFocusNextWrapsAround() async {

@@ -9,7 +9,7 @@ include::util/man-attributes.adoc[]
 == Synopsis
 [verse]
 // tag::synopsis[]
-tomwm focus [-h|--help] [--ignore-floating] [--boundaries <boundary>] [--fail-if-noop] (left|down|up|right|next|prev)
+tomwm focus [-h|--help] [--ignore-floating] [--boundaries <boundary>] [--fail-if-noop] (left|down|up|right|next|prev|master)
 tomwm focus [-h|--help] --window-id <window-id>
 
 // end::synopsis[]
@@ -25,6 +25,9 @@ ends. This is dwm's `focusstack`.
 
 `left`, `down`, `up` and `right` pick the nearest visible window in that direction instead, which
 is often what you want when the stack order is not what you are picturing.
+
+`master` focuses the master window. On the master it goes back to the most recently focused tiled
+window, so the binding switches between the master and wherever you were in the stack.
 
 // =========================================================== Options
 include::./util/conditional-options-header.adoc[]
