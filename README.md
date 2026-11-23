@@ -14,6 +14,8 @@ The jump start was given by the code base of
 preferred window manager for the past years.
 Feel free to fork and make it your own, everything is MIT and stands on the shoulder of giants.
 
+![tomwm screenshot](./resources/TomWM-screenshot.png)
+
 ## The model
 
 **Master and stack.** The master area holds the window that needs your attention right now. Every
