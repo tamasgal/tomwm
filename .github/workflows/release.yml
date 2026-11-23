@@ -1,0 +1,60 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build, without the leading v (e.g. 1.0.0)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: release
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v6
+      - run: ./.github/gh-actions-runner-xcode-select.sh
+      - run: brew install bash fish xcbeautify swiftly
+      - run: swiftly init --skip-install --assume-yes --verbose && swiftly install
+      - run: swiftly run swift --version
+      - name: Determine version
+        id: version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          if test -n "$INPUT_VERSION"; then
+            echo "version=$INPUT_VERSION" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Build
+        # "-" means ad-hoc signing, there is no tomwm-codesign-certificate on GH Actions
+        run: ./build-release.sh --build-version "${{ steps.version.outputs.version }}" --codesign-identity -
+      - name: cat ./.release/xcodebuild.log
+        if: ${{ always() }}
+        run: 'if test -f ./.release/xcodebuild.log; then cat ./.release/xcodebuild.log; fi'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TomWM-v${{ steps.version.outputs.version }}
+          path: .release/TomWM-v${{ steps.version.outputs.version }}.zip
+      - name: Publish GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # checkout does not fetch the annotated tag object, which holds the release notes
+          git fetch --force origin "refs/tags/$GITHUB_REF_NAME:refs/tags/$GITHUB_REF_NAME"
+          gh release create "$GITHUB_REF_NAME" \
+            ".release/TomWM-v${{ steps.version.outputs.version }}.zip" \
+            --title "TomWM ${{ steps.version.outputs.version }}" \
+            --notes "$(git tag -l --format='%(contents:body)' "$GITHUB_REF_NAME")
+
+          The app is ad-hoc signed and not notarized. After moving TomWM.app to /Applications, run:
+
+              xattr -d com.apple.quarantine /Applications/TomWM.app"
