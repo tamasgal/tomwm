@@ -9,6 +9,7 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '0 0 * * *' # every day at 00:00
+  workflow_dispatch:
 
 jobs:
 
@@ -17,14 +18,14 @@ jobs:
       # fail-fast: false # Disable fail-fast in matrix
       matrix:
         # https://docs.github.com/en/actions/reference/runners/github-hosted-runners#standard-github-hosted-runners-for-public-repositories
-        # https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
         # https://github.com/actions/runner-images/blob/main/images/macos/macos-15-arm64-Readme.md
         # https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md
+        # https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md (macOS 27, there is no macos-27 label)
         #
         # Xcode versions:
         # - https://en.wikipedia.org/wiki/Xcode
         # - https://xcodereleases.com/?scope=release
-        os: [macos-14, macos-15, macos-26]
+        os: [macos-15, macos-26, xcode-27]
     name: build-debug
     runs-on: ${{ matrix.os }}
     steps:
@@ -44,7 +45,7 @@ jobs:
     strategy:
       # fail-fast: false # Disable fail-fast in matrix
       matrix:
-        os: [macos-15, macos-26]
+        os: [macos-15, macos-26, xcode-27]
     name: build-release
     runs-on: ${{ matrix.os }}
     steps:
