@@ -14,8 +14,6 @@ The jump start was given by the code base of
 preferred window manager for the past years.
 Feel free to fork and make it your own, everything is MIT and stands on the shoulder of giants.
 
-![tomwm screenshot](./docs/assets/TomWM-screenshot.png)
-
 ![tomwm demo](./docs/assets/TomWM-demo.gif)
 
 ## The model
