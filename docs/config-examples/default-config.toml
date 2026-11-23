@@ -113,9 +113,6 @@ fi'''
     # Rocket.Chat, by bundle id: the dotted name does not resolve with 'open -a'
     alt-shift-r = 'exec-and-forget open -b chat.rocket'
 
-    # The Claude app
-    alt-shift-l = 'exec-and-forget open -a Claude'
-
     # ============================================================ Windows
 
     # Walk the stack (dwm focusstack)
