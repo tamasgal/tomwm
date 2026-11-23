@@ -16,6 +16,8 @@ Feel free to fork and make it your own, everything is MIT and stands on the shou
 
 ![tomwm screenshot](./docs/assets/TomWM-screenshot.png)
 
+![tomwm demo](./docs/assets/TomWM-demo.gif)
+
 ## The model
 
 **Master and stack.** The master area holds the window that needs your attention right now. Every
