@@ -16,6 +16,33 @@ Feel free to fork and make it your own, everything is MIT and stands on the shou
 
 ![tomwm demo](./docs/assets/TomWM-demo.gif)
 
+## Installation
+
+Download the latest `TomWM-vX.Y.Z.zip` from the
+[GitHub releases](https://github.com/tamasgal/tomwm/releases), unzip it and move `TomWM.app` to
+`/Applications`. macOS 13 or newer is required.
+
+The app is ad-hoc signed and not notarized, so macOS refuses to open it at first. Remove the
+quarantine flag once after every download:
+
+```
+xattr -d com.apple.quarantine /Applications/TomWM.app
+```
+
+Then:
+
+- Start TomWM and grant it the Accessibility permission when asked (System Settings, Privacy &
+  Security, Accessibility). Without it TomWM cannot move windows.
+- After an update macOS may still list TomWM as allowed but silently deny access, because every
+  build carries a new ad-hoc signature. Remove TomWM from the Accessibility list and add it again.
+- Optionally put `bin/tomwm` from the zip on your `PATH` for the CLI. If you do, run the same
+  `xattr` command on it. Man pages and shell completions are in the zip as well.
+- Without a config file the [shipped defaults](./docs/config-examples/default-config.toml) are used.
+  To customise, copy them to `~/.tomwm.toml`, see [Configuration](#configuration). Set
+  `start-at-login = true` there to launch TomWM on login.
+- Quit other window managers such as AeroSpace, yabai or Amethyst first, they will fight over the
+  windows.
+
 ## The model
 
 **Master and stack.** The master area holds the window that needs your attention right now. Every
