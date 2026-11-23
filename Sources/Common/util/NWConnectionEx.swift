@@ -4,7 +4,7 @@ import Foundation
 extension NWConnection {
     public func writeAtomic(_ msg: Codable, _ encoder: JSONEncoder = JSONEncoder()) async -> ((), error: NWError?) {
         let payload = Result { try encoder.encode(msg) }.getOrDie()
-        var data = withUnsafeBytes(of: UInt32(payload.count)) { pointer in unsafe Data.init(pointer) }
+        var data = littleEndianBytes(UInt32(payload.count))
         check(data.count == 4)
         data.append(payload)
         return await withCheckedContinuation { cont in
@@ -98,7 +98,7 @@ extension NWConnection {
     }
 
     public func writeUInt32(_ int: UInt32) async -> ((), error: NWError?) {
-        let data = withUnsafeBytes(of: int) { pointer in unsafe Data.init(pointer) }
+        let data = littleEndianBytes(int)
         check(data.count == 4)
         return await withCheckedContinuation { cont in
             send(content: data, completion: .contentProcessed { error in cont.resume(returning: ((), error)) })
@@ -123,4 +123,8 @@ private actor IsDone {
         isDone = true
         return (old, ())
     }
+}
+
+private func littleEndianBytes(_ int: UInt32) -> Data {
+    Data((0 ..< 4).map { UInt8(truncatingIfNeeded: int >> ($0 * 8)) })
 }
