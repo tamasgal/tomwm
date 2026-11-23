@@ -74,7 +74,6 @@ struct MessageView: View {
                     switch type {
                         case .config:
                             reloadConfigButton(showShortcutGroup: true, warningsAsErrors: model.message?.containsWarnings == true)
-                            openConfigButton(showShortcutGroup: true)
                     }
                 }
                 let closeButton = Button("Close") { model.message = nil }.keyboardShortcut(.defaultAction)

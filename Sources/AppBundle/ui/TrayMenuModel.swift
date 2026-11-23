@@ -15,7 +15,7 @@ public final class TrayMenuModel: ObservableObject {
     @Published var monitors: [MonitorViewModel] = []
     /// The active binding mode, or nil while the main mode is active
     @Published var activeModeName: String? = nil
-    @Published var experimentalUISettings: ExperimentalUISettings = ExperimentalUISettings()
+    @Published var menuBarSettings: MenuBarSettings = MenuBarSettings()
     @Published var lastReloadConfigContainedWarnings: Bool = false
     @Published var axPermissionStatus: AxPermissionStatus = .waitingWithPrompt
 }
